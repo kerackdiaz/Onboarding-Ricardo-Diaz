@@ -68,16 +68,18 @@ perimetro();
 function compra(){
   let precio= parseInt(prompt('ingrese el precio'));
   let cant= parseInt(prompt('ingrese la cantidad'));
-  if(cant >= 10 && cant <= 19){
-    total=precio*cant;
+  const total=precio*cant;
+  if(cant >= 10 && cant < 20){
+
     descuento=total*0.9
     alert(`Se ha aplicado un 10% de descuento a tu compra por  $${total}`);
-    alert(`el total de la compra es ${descuento}`)
-  }else{
-    total=precio*cant;
-    descuento=total*0.8
+    alert(`el total de la compra es ${descuento*0.9}`)
+  }else if(cant >=20){
     alert(`Se ha aplicado un 20% de descuento a tu compra por  $${total}`);
-    alert(`el total de la compra es ${descuento}`)
+    alert(`el total de la compra es ${descuento*0.8}`)
+  } else{
+    alert(`El valor de tu compra es de $${total}`);
+
   }
   return;
 }
@@ -126,14 +128,23 @@ calcularImpuesto();
 function toDay(){
   let day=parseInt(prompt(`indique el numero del dia siendo lunes 1 y dominto 7`));
  
-  if(day<= 5){
+  if(dia >= 1 && day<= 5){
     alert(`Es un día hábil`);
   }else{
-    alert(`Es fin de semana`);
+    switch (day) {
+      case 6:
+        alert(`Es fin de semana`);
+        break;
+      case 7:
+        alert(`Es fin de semana`);
+        break;
+      default:
+        alert("el valor ingresado no es valido");
   }
   return;
 }
 
+}
 toDay();
 
 
