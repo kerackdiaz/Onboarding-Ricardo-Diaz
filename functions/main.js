@@ -1,34 +1,14 @@
-//ejercicio 1
-
-function agregar() {
-  let resultado = 100 * 20; 
-  console.log(resultado); 
-  return;
-}
-
-
-
-agregar();
-
-
-
-let num1=10;
-let num2=5;
-
-agregar(resultado=num1*num2);
-
-console.log(resultado);
-
-
-
-function multiplicar(num1, num2) {
+function agregar(num1, num2) {
   let resultado = num1 * num2;
   return resultado;
 }
 
+let number1 = 10;
+let number2 = 5;
 
-multiplicar(resultado=10*20);
+let resultado = agregar(number1, number2);
 console.log(resultado);
+
 
 
 
@@ -198,7 +178,7 @@ obtenerDatosPersonales();
 
 
 //ejercicio 16
-function saludo(nombre) {
+function saludo2(nombre) {
   return `Hola, mi nombre es ${nombre}`;
 }
 
@@ -211,7 +191,7 @@ function presentacion() {
   let nacimiento = parseInt(prompt("Ingrese su año de nacimiento:"));
   let aActual = parseInt(prompt("Ingrese el año actual:"));
 
-  let saludoUsuario = saludo(nombre);
+  let saludoUsuario = saludo2(nombre);
   let edad = calcularEdad(nacimiento, aActual);
 
   alert(`${saludoUsuario} y tengo ${edad} años`);
